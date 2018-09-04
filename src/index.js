@@ -1,6 +1,6 @@
-var koa = require('koa');
-var middleware = require('./middleware');
-var debug = require('debug')('Code-server');
+const koa = require('koa');
+const middleware = require('./middleware');
+const debug = require('debug')('Code-server');
 
 function Server(option) {
   this.opts = option || {};
@@ -9,7 +9,7 @@ function Server(option) {
 Server.prototype = new koa();
 
 Server.prototype.start = function () {
-  var port = process.env.PORT || this.opts.port || 3000;
+  const port = process.env.PORT || this.opts.port || 3000;
   this.keys = ['barcode'];
   this.proxy = true;
   this.use(middleware.cors({

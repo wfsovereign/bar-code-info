@@ -4,8 +4,7 @@ var MainRouter = new Router()
 var controller = require('../controller')
 
 MainRouter.get('/', async function (ctx) {
-  const result = await controller.helloWorld()
-  debug('result ,', result)
+  const dog = await controller.dogController.getPage()
   ctx.body = 'hello darling'
 })
 

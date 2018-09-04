@@ -4,3 +4,5 @@ exports.helloWorld = function () {
   debug('hello world')
   return 'hello world'
 }
+
+exports.dogController = require('./dog')

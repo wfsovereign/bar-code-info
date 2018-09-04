@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-cors": "0.0.16",

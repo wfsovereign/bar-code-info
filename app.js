@@ -6,7 +6,6 @@ var debug = require('debug')('Code-app');
 
 server.start();
 
-
 server.errHandle(function(err) {
   debug(err);
 });
