@@ -1,0 +1,20 @@
+{
+  "name": "bar-code-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor -i test/ app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-logger": "^3.2.0",
+    "koa-response-time": "^2.0.0",
+    "koa-router": "^7.4.0"
+  }
+}
