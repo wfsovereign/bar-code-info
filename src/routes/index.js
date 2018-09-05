@@ -5,6 +5,7 @@ var controller = require('../controller')
 
 MainRouter.get('/', async function (ctx) {
   const dog = await controller.dogController.getPage()
+  const douban = await controller.doubanController.getPage()
   ctx.body = 'hello darling'
 })
 
