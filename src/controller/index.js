@@ -7,3 +7,4 @@ exports.helloWorld = function () {
 
 exports.dogController = require('./dog')
 exports.doubanController = require('./douban')
+exports.catController = require('./cat')
