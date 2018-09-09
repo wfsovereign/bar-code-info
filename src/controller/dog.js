@@ -3,8 +3,8 @@ const config = require('../configs')
 const debug = require('debug')('Code-dog-control')
 const cheerio = require('cheerio')
 
-exports.getPage = function () {
-  request.get(config.dogUrl + '9787505734227', config.dogHeaders)
+exports.getPage = function (id) {
+  return request.get(config.dogUrl + id, config.dogHeaders)
     .then(res => {
       const page = res.data
       const $ = cheerio.load(page, { decodeEntities: false })
@@ -12,8 +12,6 @@ exports.getPage = function () {
       const bookList = []
 
       bookListElement.map(function (i, el) {
-        debug('i ', i)
-        debug('i el', $(el).html())
         const item = $(el)
         const price = item.find('.p-price').text().trim()
         const link = item.find('.p-img a img').attr('source-data-lazy-img')
@@ -26,8 +24,8 @@ exports.getPage = function () {
           detailLink: 'https:' + detailLink
         })
       })
-
       debug('result ,', bookList)
+      return bookList
     })
     .catch(e => debug(e))
 }
